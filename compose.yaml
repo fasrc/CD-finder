@@ -2,9 +2,8 @@ services:
   drupal:
     build:
        dockerfile_inline: |
-          FROM docker.io/library/drupal:8-apache
-          RUN composer selfupdate --2 \
-           && composer require 'drupal/paragraphs:^1.13' \
+          FROM docker.io/library/drupal:10-apache
+          RUN composer require 'drupal/paragraphs:^1.19' \
            && composer config --no-plugins allow-plugins.composer/installers true \
            && composer config --no-plugins allow-plugins.drupal/core-composer-scaffold true \
            && composer config --no-plugins allow-plugins.drupal/core-project-message true \
