@@ -8,6 +8,7 @@ then
   drush cache:rebuild
   drush pm:enable paragraphs -y
   drush pm:enable finder -y
+  drush pm:enable tome_static -y
   drush cache:rebuild
   chmod 777 /mnt/drupal.sqlite
 fi

@@ -1,4 +1,6 @@
 .git*
-db
+Dockerfile
 README.md
 compose.yaml
+db
+html
