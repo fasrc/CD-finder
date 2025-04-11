@@ -13,7 +13,8 @@ jobs:
       - name: Build static site
         run: |
           docker compose run static -l ${GITHUB_PAGES_URL}
-          sudo find html \( -name '*.html' -o -name '*.css' \) -exec sed -i'' -e 's#/rest/#/CD-finder/rest/#g' -e 's#action="/#action="/CD-finder/g#' -e 's#href="/#href="/CD-finder/#g' -e 's#(/modules/#(/CD-finder/modules/#g' -e 's#(/core/#(/CD-finder/core/#g' -e 's#src="/#src="/CD-finder/#g' {} +
+          sudo find html \( -name '*.html' -o -name '*.css' \) -exec sed -i'' -e 's#action="/#action="/CD-finder/g#' -e 's#href="/#href="/CD-finder/#g' -e 's#(/modules/#(/CD-finder/modules/#g' -e 's#(/core/#(/CD-finder/core/#g' -e 's#src="/#src="/CD-finder/#g' {} +
+          sudo find html/sites/default/files/js -type f -exec sed -i'' -e 's#/rest/#/CD-finder/rest/#g' {} +
       - name: Upload static files as artifact
         uses: actions/upload-pages-artifact@v3
         with:
