@@ -8,8 +8,6 @@ services:
     volumes:
       - ./db:/mnt
       - ./html:/opt/drupal/html
-    profiles:
-      - drupal
 
   static:
     build: .
