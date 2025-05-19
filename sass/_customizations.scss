@@ -848,7 +848,7 @@ ul.browser-default li {
 .layout--content-medium,
 .layout--pass--content-medium > * {
   @media (min-width: $screen-sm-min) {
-    grid-column: 1 / 15;
+    grid-column: 1 / 15 !important;
   }
 
   @media (min-width: $screen-xl-min) {
