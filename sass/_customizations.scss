@@ -142,6 +142,7 @@ footer a {
   position: relative;
   text-indent: 30px;
   margin-left: -3px !important;
+  font-size: larger;
 
   @media (max-width: $screen-sm-min) {
     margin-left: 0 !important;
@@ -150,7 +151,7 @@ footer a {
 }
 .services-header h3 .fa {
   position: absolute;
-  top: -2px;
+  top: 5px;
   left: 3px;
   font-size: 24px;
   color: $modularstorage-color-d;
