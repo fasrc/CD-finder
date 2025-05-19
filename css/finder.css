@@ -177,6 +177,7 @@ footer a {
   position: relative;
   text-indent: 30px;
   margin-left: -3px !important;
+  font-size: larger;
 }
 @media (max-width: 768px) {
   .services-header h3 {
@@ -187,7 +188,7 @@ footer a {
 
 .services-header h3 .fa {
   position: absolute;
-  top: -2px;
+  top: 5px;
   left: 3px;
   font-size: 24px;
   color: #5e6caa;
@@ -854,6 +855,6 @@ ul.browser-default li {
 @media (min-width: 768px) {
   .layout--content-medium,
   .layout--pass--content-medium > * {
-    grid-column: 1/15!important;
+    grid-column: 1/15;
   }
 }
