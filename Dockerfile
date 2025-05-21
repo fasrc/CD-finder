@@ -1,3 +1,10 @@
+FROM docker.io/library/node:22-alpine AS node
+COPY package*.json .
+RUN npm ci
+COPY gulpfile.js .
+COPY sass sass
+RUN mkdir css && npm run gulp
+
 FROM docker.io/library/drupal:11-apache
 RUN composer require 'drupal/paragraphs:^1.19' \
  && composer require 'drupal/tome:^1.13' \
@@ -10,5 +17,6 @@ RUN composer require 'drupal/paragraphs:^1.19' \
  && echo "\$databases['default']['default'] = ['driver' => 'sqlite', 'database' => '/mnt/drupal.sqlite'];" >> /var/www/html/sites/default/settings.php \
  && echo "\$settings['hash_salt'] = 'my-hash-salt';" >> /var/www/html/sites/default/settings.php
 COPY --chmod=555 . /var/www/html/modules/finder
+COPY --from=node --chmod=555 /css/finder.css /var/www/html/modules/finder/css
 ENV PATH="/opt/drupal/vendor/bin:${PATH}"
 ENTRYPOINT ["/var/www/html/modules/finder/entrypoint.sh"]

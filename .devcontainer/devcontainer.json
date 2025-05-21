@@ -1,0 +1,3 @@
+{
+    "postCreateCommand": "" // disable node install in codespace
+}
