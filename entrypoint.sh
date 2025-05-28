@@ -13,4 +13,6 @@ then
   chmod 777 /mnt/drupal.sqlite
 fi
 
+drush cache:rebuild
+
 docker-php-entrypoint apache2-foreground
