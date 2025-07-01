@@ -11,7 +11,8 @@ services:
 
   static:
     build: .
-    entrypoint: ["drush", "tome:static"]
+    environment:
+      STATIC_SITE: "true"
     volumes:
       - ./db:/mnt
       - ./html:/opt/drupal/html

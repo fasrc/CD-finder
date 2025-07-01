@@ -15,4 +15,9 @@ fi
 
 drush cache:rebuild
 
-docker-php-entrypoint apache2-foreground
+if ${STATIC_SITE:-false}
+then
+  drush tome:static "$@"
+else
+  docker-php-entrypoint apache2-foreground
+fi

@@ -5,7 +5,7 @@ COPY gulpfile.js .
 COPY sass sass
 RUN mkdir css && npm run gulp
 
-FROM docker.io/library/drupal:11-apache
+FROM docker.io/library/drupal:11.1.8-apache
 RUN composer require 'drupal/paragraphs:^1.19' \
  && composer require 'drupal/tome:^1.13' \
  && composer config --no-plugins allow-plugins.composer/installers true \
