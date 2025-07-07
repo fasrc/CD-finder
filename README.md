@@ -50,7 +50,7 @@ docker compose run --build static
 Commit/push any changes (including to the Drupal database: ./db/drupal.sqlite) to the default branch to trigger a GitHub Actions workflow ([.github/workflows/build-deploy.yaml](.github/workflows/build-deploy.yaml)) that builds a static site & deploys to GitHub Pages.
 
 Access the static site at:
-https://fasrc.github.io/CD-Finder/finder
+https://fasrc.github.io/CD-finder/finder
 
 # Finder Module
 
