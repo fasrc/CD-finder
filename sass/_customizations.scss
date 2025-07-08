@@ -115,6 +115,10 @@ footer a {
 
 .cwd-scrolling-table .floating-row-header {
   background-color: lighten($medium-gray, 50);
+  & > div {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .hero,
@@ -172,8 +176,11 @@ footer a {
 .services-header .btn-secondary {
   margin: 4px 0;
 }
-.step-1 + button {
-  margin-top: 1.75em;
+.step-1 {
+  font-size: larger;
+  & + button {
+    margin-top: 1.75em;
+  }
 }
 
 .title {
