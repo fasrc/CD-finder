@@ -174,7 +174,7 @@
             $(".facet").on("change", function (thefacet) {
                 var a = find_facet($(this).attr("facetid"));
 
-                $('.jump-to-chart').hide();
+                // $('.jump-to-chart').hide();
 
                 a.selected = ! a.selected;
                 if (! a.selected) {
@@ -428,15 +428,15 @@
       $('html, body').animate({
         scrollTop: $(".comparisonchart-wrapper-wrapper").offset().top
       }, 500);
-      $(".jump-to-chart").hide();
+    //   $(".jump-to-chart").hide();
     });
 
     $( "#modularstorage-services" ).on('click', '.cardcheckbox', function() {
-        $('.jump-to-chart').show();
+        // $('.jump-to-chart').show();
         var service_count = $('.cardcheckbox:checked').length;
         if (service_count < 1) {
               $('#container34').hide();
-            $(".jump-to-chart").hide();
+            // $(".jump-to-chart").hide();
         } else {
             $('#container34').show();
         }
@@ -455,7 +455,7 @@
     $('.btn-select-all').click(function(){
         $('.cardcheckbox').not('.mismatch .cardcheckbox').prop('checked', true);
         evaluate_services();
-        $('.jump-to-chart').show();
+        // $('.jump-to-chart').show();
         $('#container34').show();
         listenForScrollEvent($('#comparisonchart tbody'));
     });
@@ -463,7 +463,7 @@
     $('.btn-select-none').click(function(){
         $('.cardcheckbox').prop('checked', false);
         evaluate_services();
-        $('.jump-to-chart').hide();
+        // $('.jump-to-chart').hide();
         $('#container34').hide();  // not sure we want this
     });
 
